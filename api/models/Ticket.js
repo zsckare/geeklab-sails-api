@@ -6,7 +6,7 @@
  */
 
 module.exports = {
-
+  connection: 'mysql',
   attributes: {
   	folio:{
   		type: 'string'
@@ -14,12 +14,13 @@ module.exports = {
   	status:{
   		type: 'string'
   	},
-  	date:{
-  		type: 'date'
-  	},
   	costumer_id:{
   		type: 'integer'
-  	}
+  	},
+    items: {
+      collection: 'item',
+      via: 'owner'
+    }
   }
 };
 

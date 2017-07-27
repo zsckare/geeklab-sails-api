@@ -28,9 +28,9 @@ module.exports.connections = {
   * Installed by default.                                                    *
   *                                                                          *
   ***************************************************************************/
-  localDiskDb: {
-    adapter: 'sails-disk'
-  },
+  // localDiskDb: {
+  //   adapter: 'sails-disk'
+  // },
 
   /***************************************************************************
   *                                                                          *
@@ -47,7 +47,17 @@ module.exports.connections = {
   //   password: 'YOUR_MYSQL_PASSWORD', //optional
   //   database: 'YOUR_MYSQL_DB' //optional
   // },
-
+  mysql: {
+      adapter   : 'sails-mysql',
+      host      : 'localhost',
+      port      : 3306,
+      user      : 'root',
+      password  : '',
+      database  : 'geeklab-sails',
+      // Optional
+      charset   : 'utf8',
+      collation : 'utf8_spanish_ci'
+  },
   /***************************************************************************
   *                                                                          *
   * MongoDB is the leading NoSQL database.                                   *

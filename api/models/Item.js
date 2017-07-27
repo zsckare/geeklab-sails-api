@@ -6,7 +6,7 @@
  */
 
 module.exports = {
-
+ connection: 'mysql',
   attributes: {
 	brand:{
 		type: 'string'
@@ -15,11 +15,18 @@ module.exports = {
 		type: 'string'
 	},
 	device_kind:{
-		type: 'string'
+		type: 'integer'
 	},
 	quotation:{
 		type: 'string'
-	}
+	},
+	description:{
+		type: 'string',
+		maxLength: 255
+	},
+	owner: {
+      model: 'ticket'
+    }
   }
 };
 
